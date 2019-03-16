@@ -1,0 +1,3047 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7k160t-1-ffg676
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\3170300180\lab1_2\LEDP2S_IO.v" into library work
+Parsing module <LEDP2S>.
+Analyzing Verilog file "D:\3170300180\lab1_2\SEnter_2_32_IO.v" into library work
+Parsing module <SEnter_2_32>.
+Analyzing Verilog file "D:\3170300180\lab1_2\Seg7_Dev_IO.v" into library work
+Parsing module <Seg7_Dev>.
+Analyzing Verilog file "D:\3170300180\lab1_2\SAnti_jitter_IO.v" into library work
+Parsing module <SAnti_jitter>.
+Analyzing Verilog file "D:\3170300180\lab1_2\PIO_IO.v" into library work
+Parsing module <PIO>.
+Analyzing Verilog file "D:\3170300180\lab1_2\Multi_8CH32_IO.v" into library work
+Parsing module <Multi_8CH32>.
+Analyzing Verilog file "D:\3170300180\lab1_2\ipcore_dir\ROM_B.v" into library work
+Parsing module <ROM_B>.
+Analyzing Verilog file "D:\3170300180\lab1_2\ipcore_dir\RAM_B.v" into library work
+Parsing module <RAM_B>.
+Analyzing Verilog file "D:\3170300180\lab1_2\GPIO.v" into library work
+Parsing module <GPIO>.
+Analyzing Verilog file "D:\3170300180\lab1_2\Display_IO.v" into library work
+Parsing module <Display>.
+Analyzing Verilog file "D:\3170300180\clk_div.v" into library work
+Parsing module <clk_div>.
+Analyzing Verilog file "D:\3170300180\lab1_2\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\3170300180\lab1_2\top.v" Line 77: Port counter_set is not connected to this instance
+
+Elaborating module <top>.
+
+Elaborating module <SAnti_jitter>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\SAnti_jitter_IO.v" Line 21: Empty module <SAnti_jitter> remains a black box.
+WARNING:HDLCompiler:1127 - "D:\3170300180\lab1_2\top.v" Line 32: Assignment to Pulse ignored, since the identifier is never used
+
+Elaborating module <clk_div>.
+WARNING:HDLCompiler:1127 - "D:\3170300180\lab1_2\top.v" Line 35: Assignment to U8_clkCPU ignored, since the identifier is never used
+
+Elaborating module <SEnter_2_32>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\SEnter_2_32_IO.v" Line 21: Empty module <SEnter_2_32> remains a black box.
+WARNING:HDLCompiler:1127 - "D:\3170300180\lab1_2\top.v" Line 42: Assignment to M4_blink ignored, since the identifier is never used
+
+Elaborating module <Display>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\Display_IO.v" Line 21: Empty module <Display> remains a black box.
+
+Elaborating module <ROM_B>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\ipcore_dir\ROM_B.v" Line 39: Empty module <ROM_B> remains a black box.
+
+Elaborating module <RAM_B>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\ipcore_dir\RAM_B.v" Line 39: Empty module <RAM_B> remains a black box.
+
+Elaborating module <GPIO>.
+
+Elaborating module <LEDP2S(DATA_BITS=16,DATA_COUNT_BITS=4)>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\LEDP2S_IO.v" Line 21: Empty module <LEDP2S(DATA_BITS=16,DATA_COUNT_BITS=4)> remains a black box.
+WARNING:HDLCompiler:189 - "D:\3170300180\lab1_2\top.v" Line 62: Size mismatch in connection of port <counter_set>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\3170300180\lab1_2\top.v" Line 62: Assignment to counter_set ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\3170300180\lab1_2\top.v" Line 63: Size mismatch in connection of port <LED_out>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\3170300180\lab1_2\top.v" Line 63: Assignment to led_out_U7 ignored, since the identifier is never used
+
+Elaborating module <Multi_8CH32>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\Multi_8CH32_IO.v" Line 21: Empty module <Multi_8CH32> remains a black box.
+WARNING:HDLCompiler:189 - "D:\3170300180\lab1_2\top.v" Line 66: Size mismatch in connection of port <LES>. Formal port size is 64-bit while actual signal size is 1-bit.
+
+Elaborating module <Seg7_Dev>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\Seg7_Dev_IO.v" Line 21: Empty module <Seg7_Dev> remains a black box.
+
+Elaborating module <PIO>.
+WARNING:HDLCompiler:1499 - "D:\3170300180\lab1_2\PIO_IO.v" Line 21: Empty module <PIO> remains a black box.
+WARNING:HDLCompiler:634 - "D:\3170300180\lab1_2\top.v" Line 66: Net <LES> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "D:\3170300180\lab1_2\top.v".
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 30: Output port <pulse_out> of the instance <U9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 35: Output port <Clk_CPU> of the instance <U8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 40: Output port <blink> of the instance <M4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 62: Output port <counter_set> of the instance <U7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 62: Output port <LED_out> of the instance <U7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 62: Output port <GPIOf0> of the instance <U7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 77: Output port <counter_set> of the instance <U71> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\3170300180\lab1_2\top.v" line 77: Output port <GPIOf0> of the instance <U71> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <LES> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "D:\3170300180\clk_div.v".
+WARNING:Xst:647 - Input <SW2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <Clk_CPU> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <clkdiv<31>>.
+    Found 1-bit register for signal <clkdiv<30>>.
+    Found 1-bit register for signal <clkdiv<29>>.
+    Found 1-bit register for signal <clkdiv<28>>.
+    Found 1-bit register for signal <clkdiv<27>>.
+    Found 1-bit register for signal <clkdiv<26>>.
+    Found 1-bit register for signal <clkdiv<25>>.
+    Found 1-bit register for signal <clkdiv<24>>.
+    Found 1-bit register for signal <clkdiv<23>>.
+    Found 1-bit register for signal <clkdiv<22>>.
+    Found 1-bit register for signal <clkdiv<21>>.
+    Found 1-bit register for signal <clkdiv<20>>.
+    Found 1-bit register for signal <clkdiv<19>>.
+    Found 1-bit register for signal <clkdiv<18>>.
+    Found 1-bit register for signal <clkdiv<17>>.
+    Found 1-bit register for signal <clkdiv<16>>.
+    Found 1-bit register for signal <clkdiv<15>>.
+    Found 1-bit register for signal <clkdiv<14>>.
+    Found 1-bit register for signal <clkdiv<13>>.
+    Found 1-bit register for signal <clkdiv<12>>.
+    Found 1-bit register for signal <clkdiv<11>>.
+    Found 1-bit register for signal <clkdiv<10>>.
+    Found 1-bit register for signal <clkdiv<9>>.
+    Found 1-bit register for signal <clkdiv<8>>.
+    Found 1-bit register for signal <clkdiv<7>>.
+    Found 1-bit register for signal <clkdiv<6>>.
+    Found 1-bit register for signal <clkdiv<5>>.
+    Found 1-bit register for signal <clkdiv<4>>.
+    Found 1-bit register for signal <clkdiv<3>>.
+    Found 1-bit register for signal <clkdiv<2>>.
+    Found 1-bit register for signal <clkdiv<1>>.
+    Found 1-bit register for signal <clkdiv<0>>.
+    Found 32-bit adder for signal <clkdiv[31]_GND_3_o_add_1_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <GPIO>.
+    Related source file is "D:\3170300180\lab1_2\GPIO.v".
+    Found 2-bit register for signal <counter_set>.
+    Found 16-bit register for signal <LED>.
+    Found 14-bit register for signal <GPIOf0>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <GPIO> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 35
+ 1-bit register                                        : 32
+ 14-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <SAnti_jitter.ngc>.
+Reading core <SEnter_2_32.ngc>.
+Reading core <Display.ngc>.
+Reading core <Multi_8CH32.ngc>.
+Reading core <PIO.ngc>.
+Reading core <ipcore_dir/RAM_B.ngc>.
+Reading core <Seg7_Dev.ngc>.
+Reading core <ipcore_dir/ROM_B.ngc>.
+Reading core <LEDP2S.ngc>.
+Loading core <SAnti_jitter> for timing and area information for instance <U9>.
+Loading core <SEnter_2_32> for timing and area information for instance <M4>.
+Loading core <Display> for timing and area information for instance <U6>.
+Loading core <Multi_8CH32> for timing and area information for instance <U5>.
+Loading core <PIO> for timing and area information for instance <U71>.
+Loading core <RAM_B> for timing and area information for instance <U3>.
+Loading core <Seg7_Dev> for timing and area information for instance <U61>.
+Loading core <ROM_B> for timing and area information for instance <U2>.
+Loading core <LEDP2S> for timing and area information for instance <M1>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <counter_set_0> in Unit <GPIO> is equivalent to the following FF/Latch, which will be removed : <counter_set_1> 
+WARNING:Xst:1710 - FF/Latch <counter_set_0> (without init value) has a constant value of 0 in block <GPIO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Kintex7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    clkdiv_31 in unit <clk_div>
+    clkdiv_0 in unit <clk_div>
+    clkdiv_1 in unit <clk_div>
+    clkdiv_2 in unit <clk_div>
+    clkdiv_3 in unit <clk_div>
+    clkdiv_4 in unit <clk_div>
+    clkdiv_5 in unit <clk_div>
+    clkdiv_6 in unit <clk_div>
+    clkdiv_7 in unit <clk_div>
+    clkdiv_8 in unit <clk_div>
+    clkdiv_9 in unit <clk_div>
+    clkdiv_10 in unit <clk_div>
+    clkdiv_11 in unit <clk_div>
+    clkdiv_12 in unit <clk_div>
+    clkdiv_13 in unit <clk_div>
+    clkdiv_14 in unit <clk_div>
+    clkdiv_15 in unit <clk_div>
+    clkdiv_16 in unit <clk_div>
+    clkdiv_17 in unit <clk_div>
+    clkdiv_18 in unit <clk_div>
+    clkdiv_19 in unit <clk_div>
+    clkdiv_20 in unit <clk_div>
+    clkdiv_21 in unit <clk_div>
+    clkdiv_22 in unit <clk_div>
+    clkdiv_23 in unit <clk_div>
+    clkdiv_24 in unit <clk_div>
+    clkdiv_25 in unit <clk_div>
+    clkdiv_26 in unit <clk_div>
+    clkdiv_27 in unit <clk_div>
+    clkdiv_28 in unit <clk_div>
+    clkdiv_30 in unit <clk_div>
+    clkdiv_29 in unit <clk_div>
+
+
+Optimizing unit <top> ...
+
+Optimizing unit <clk_div> ...
+
+Optimizing unit <GPIO> ...
+WARNING:Xst:2677 - Node <U7/GPIOf0_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <U7/GPIOf0_0> of sequential type is unconnected in block <top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <P7SEG/sh_clk> in Unit <U6> is equivalent to the following FF/Latch : <P7SEG/sh_clk_1> 
+INFO:Xst:2260 - The FF/Latch <P7SEG/S_0> in Unit <U6> is equivalent to the following FF/Latch : <P7SEG/S_0_1> 
+INFO:Xst:2260 - The FF/Latch <P7SEG/sh_clk> in Unit <U6> is equivalent to the following FF/Latch : <P7SEG/sh_clk_1> 
+INFO:Xst:2260 - The FF/Latch <P7SEG/S_0> in Unit <U6> is equivalent to the following FF/Latch : <P7SEG/S_0_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1547
+#      AND2                        : 10
+#      AND3                        : 99
+#      AND4                        : 81
+#      GND                         : 4
+#      INV                         : 59
+#      LUT1                        : 97
+#      LUT2                        : 37
+#      LUT3                        : 174
+#      LUT4                        : 129
+#      LUT5                        : 152
+#      LUT6                        : 285
+#      MUXCY                       : 132
+#      MUXF7                       : 56
+#      OR2                         : 63
+#      OR3                         : 27
+#      OR4                         : 36
+#      VCC                         : 5
+#      XORCY                       : 101
+# FlipFlops/Latches                : 482
+#      FD                          : 142
+#      FDC                         : 34
+#      FDC_1                       : 13
+#      FDCE_1                      : 7
+#      FDE                         : 100
+#      FDE_1                       : 87
+#      FDP                         : 32
+#      FDP_1                       : 3
+#      FDPE_1                      : 3
+#      FDRE                        : 29
+#      LDC                         : 32
+# RAMS                             : 1
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 58
+#      IBUF                        : 21
+#      OBUF                        : 37
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k160tffg676-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             482  out of  202800     0%  
+ Number of Slice LUTs:                  933  out of  101400     0%  
+    Number used as Logic:               933  out of  101400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1071
+   Number with an unused Flip Flop:     589  out of   1071    54%  
+   Number with an unused LUT:           138  out of   1071    12%  
+   Number of fully used LUT-FF pairs:   344  out of   1071    32%  
+   Number of unique control sets:       117
+
+IO Utilization: 
+ Number of IOs:                          59
+ Number of bonded IOBs:                  59  out of    400    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    325     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------+--------------------------+-------+
+Clock Signal                                             | Clock buffer(FF name)    | Load  |
+---------------------------------------------------------+--------------------------+-------+
+clk_100mhz                                               | BUFGP                    | 342   |
+U9/clk1                                                  | BUFG                     | 41    |
+M4/push(M4/push1:O)                                      | NONE(*)(M4/state_0)      | 3     |
+U6/P7SEG/sh_clk                                          | BUFG                     | 65    |
+U8/rst_clkdiv[31]_AND_1_o(U8/rst_clkdiv[31]_AND_1_o1:O)  | NONE(*)(U8/clkdiv_31_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_63_o(U8/rst_clkdiv[31]_AND_63_o1:O)| NONE(*)(U8/clkdiv_0_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_61_o(U8/rst_clkdiv[31]_AND_61_o1:O)| NONE(*)(U8/clkdiv_1_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_59_o(U8/rst_clkdiv[31]_AND_59_o1:O)| NONE(*)(U8/clkdiv_2_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_57_o(U8/rst_clkdiv[31]_AND_57_o1:O)| NONE(*)(U8/clkdiv_3_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_55_o(U8/rst_clkdiv[31]_AND_55_o1:O)| NONE(*)(U8/clkdiv_4_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_53_o(U8/rst_clkdiv[31]_AND_53_o1:O)| NONE(*)(U8/clkdiv_5_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_51_o(U8/rst_clkdiv[31]_AND_51_o1:O)| NONE(*)(U8/clkdiv_6_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_49_o(U8/rst_clkdiv[31]_AND_49_o1:O)| NONE(*)(U8/clkdiv_7_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_47_o(U8/rst_clkdiv[31]_AND_47_o1:O)| NONE(*)(U8/clkdiv_8_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_45_o(U8/rst_clkdiv[31]_AND_45_o1:O)| NONE(*)(U8/clkdiv_9_LDC) | 1     |
+U8/rst_clkdiv[31]_AND_43_o(U8/rst_clkdiv[31]_AND_43_o1:O)| NONE(*)(U8/clkdiv_10_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_41_o(U8/rst_clkdiv[31]_AND_41_o1:O)| NONE(*)(U8/clkdiv_11_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_39_o(U8/rst_clkdiv[31]_AND_39_o1:O)| NONE(*)(U8/clkdiv_12_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_37_o(U8/rst_clkdiv[31]_AND_37_o1:O)| NONE(*)(U8/clkdiv_13_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_35_o(U8/rst_clkdiv[31]_AND_35_o1:O)| NONE(*)(U8/clkdiv_14_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_33_o(U8/rst_clkdiv[31]_AND_33_o1:O)| NONE(*)(U8/clkdiv_15_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_31_o(U8/rst_clkdiv[31]_AND_31_o1:O)| NONE(*)(U8/clkdiv_16_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_29_o(U8/rst_clkdiv[31]_AND_29_o1:O)| NONE(*)(U8/clkdiv_17_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_27_o(U8/rst_clkdiv[31]_AND_27_o1:O)| NONE(*)(U8/clkdiv_18_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_25_o(U8/rst_clkdiv[31]_AND_25_o1:O)| NONE(*)(U8/clkdiv_19_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_23_o(U8/rst_clkdiv[31]_AND_23_o1:O)| NONE(*)(U8/clkdiv_20_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_21_o(U8/rst_clkdiv[31]_AND_21_o1:O)| NONE(*)(U8/clkdiv_21_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_19_o(U8/rst_clkdiv[31]_AND_19_o1:O)| NONE(*)(U8/clkdiv_22_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_17_o(U8/rst_clkdiv[31]_AND_17_o1:O)| NONE(*)(U8/clkdiv_23_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_15_o(U8/rst_clkdiv[31]_AND_15_o1:O)| NONE(*)(U8/clkdiv_24_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_13_o(U8/rst_clkdiv[31]_AND_13_o1:O)| NONE(*)(U8/clkdiv_25_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_11_o(U8/rst_clkdiv[31]_AND_11_o1:O)| NONE(*)(U8/clkdiv_26_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_9_o(U8/rst_clkdiv[31]_AND_9_o1:O)  | NONE(*)(U8/clkdiv_27_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_7_o(U8/rst_clkdiv[31]_AND_7_o1:O)  | NONE(*)(U8/clkdiv_28_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_3_o(U8/rst_clkdiv[31]_AND_3_o1:O)  | NONE(*)(U8/clkdiv_30_LDC)| 1     |
+U8/rst_clkdiv[31]_AND_5_o(U8/rst_clkdiv[31]_AND_5_o1:O)  | NONE(*)(U8/clkdiv_29_LDC)| 1     |
+---------------------------------------------------------+--------------------------+-------+
+(*) These 33 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                         | Load  |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+U3/N1(U3/XST_GND:G)                | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 2     |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.548ns (Maximum Frequency: 152.720MHz)
+   Minimum input arrival time before clock: 6.522ns
+   Maximum output required time after clock: 8.169ns
+   Maximum combinational path delay: 7.096ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_100mhz'
+  Clock period: 6.548ns (frequency: 152.720MHz)
+  Total number of paths / destination ports: 8655 / 482
+-------------------------------------------------------------------------
+Delay:               3.274ns (Levels of Logic = 5)
+  Source:            U8/clkdiv_24_P_24 (FF)
+  Destination:       U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram (RAM)
+  Source Clock:      clk_100mhz rising
+  Destination Clock: clk_100mhz falling
+
+  Data Path: U8/clkdiv_24_P_24 to U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.282   0.499  U8/clkdiv_24_P_24 (U8/clkdiv_24_P_24)
+     LUT3:I1->O           34   0.053   0.878  U8/clkdiv_241 (U8/clkdiv_24)
+     begin scope: 'U2:a<0>'
+     LUT5:I0->O            1   0.053   0.413  spo<4>_SW0 (N0)
+     LUT6:I5->O            4   0.053   0.419  spo<4> (spo<0>)
+     end scope: 'U2:spo<0>'
+     begin scope: 'U3:dina<0>'
+     RAMB36E1:DIADI0           0.624          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
+    ----------------------------------------
+    Total                      3.274ns (1.065ns logic, 2.209ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U9/clk1'
+  Clock period: 2.576ns (frequency: 388.199MHz)
+  Total number of paths / destination ports: 1454 / 90
+-------------------------------------------------------------------------
+Delay:               2.576ns (Levels of Logic = 7)
+  Source:            U9/counter_8 (FF)
+  Destination:       U9/Key_x_0 (FF)
+  Source Clock:      U9/clk1 rising
+  Destination Clock: U9/clk1 rising
+
+  Data Path: U9/counter_8 to U9/Key_x_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.282   0.739  counter_8 (counter<8>)
+     LUT5:I0->O            1   0.053   0.000  Mcompar_counter[31]_GND_1_o_LessThan_5_o_lut<0> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<0> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<1> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<2> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<3> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           8   0.015   0.445  Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<4> (Mcompar_counter[31]_GND_1_o_LessThan_5_o_cy<4>)
+     INV:I->O              7   0.067   0.439  _n0225_inv1_cepot_INV_0 (_n0225_inv1_cepot)
+     FDE:CE                    0.200          Key_x_0
+    ----------------------------------------
+    Total                      2.576ns (0.953ns logic, 1.623ns route)
+                                       (37.0% logic, 63.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M4/push'
+  Clock period: 1.277ns (frequency: 783.085MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               1.277ns (Levels of Logic = 1)
+  Source:            M4/state_0 (FF)
+  Destination:       M4/state_0 (FF)
+  Source Clock:      M4/push rising
+  Destination Clock: M4/push rising
+
+  Data Path: M4/state_0 to M4/state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             19   0.282   0.518  state_0 (state<0>)
+     INV:I->O              1   0.067   0.399  Result<0>1_INV_0 (Result<0>)
+     FDE:D                     0.011          state_0
+    ----------------------------------------
+    Total                      1.277ns (0.360ns logic, 0.917ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U6/P7SEG/sh_clk'
+  Clock period: 0.852ns (frequency: 1173.709MHz)
+  Total number of paths / destination ports: 128 / 65
+-------------------------------------------------------------------------
+Delay:               0.852ns (Levels of Logic = 1)
+  Source:            U6/P7SEG/Q_63 (FF)
+  Destination:       U6/P7SEG/Q_62 (FF)
+  Source Clock:      U6/P7SEG/sh_clk falling
+  Destination Clock: U6/P7SEG/sh_clk falling
+
+  Data Path: U6/P7SEG/Q_63 to U6/P7SEG/Q_62
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            3   0.289   0.499  P7SEG/Q_63 (P7SEG/Q<63>)
+     LUT5:I3->O            1   0.053   0.000  P7SEG/mux12312 (P7SEG/S1_GND_13_o_wide_mux_1_OUT<62>)
+     FDE_1:D                   0.011          P7SEG/Q_62
+    ----------------------------------------
+    Total                      0.852ns (0.353ns logic, 0.499ns route)
+                                       (41.4% logic, 58.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_1_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_31_LDC (LATCH)
+  Destination:       U8/clkdiv_31_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_1_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_1_o falling
+
+  Data Path: U8/clkdiv_31_LDC to U8/clkdiv_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_31_LDC (U8/clkdiv_31_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_2_o1 (U8/rst_clkdiv[31]_AND_2_o)
+     LDC:CLR                   0.325          U8/clkdiv_31_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_63_o'
+  Clock period: 1.794ns (frequency: 557.414MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.794ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_0_LDC (LATCH)
+  Destination:       U8/clkdiv_0_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_63_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_63_o falling
+
+  Data Path: U8/clkdiv_0_LDC to U8/clkdiv_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.389   0.622  U8/clkdiv_0_LDC (U8/clkdiv_0_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_64_o1 (U8/rst_clkdiv[31]_AND_64_o)
+     LDC:CLR                   0.325          U8/clkdiv_0_LDC
+    ----------------------------------------
+    Total                      1.794ns (0.767ns logic, 1.027ns route)
+                                       (42.8% logic, 57.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_61_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_1_LDC (LATCH)
+  Destination:       U8/clkdiv_1_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_61_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_61_o falling
+
+  Data Path: U8/clkdiv_1_LDC to U8/clkdiv_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_1_LDC (U8/clkdiv_1_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_62_o1 (U8/rst_clkdiv[31]_AND_62_o)
+     LDC:CLR                   0.325          U8/clkdiv_1_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_59_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_2_LDC (LATCH)
+  Destination:       U8/clkdiv_2_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_59_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_59_o falling
+
+  Data Path: U8/clkdiv_2_LDC to U8/clkdiv_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_2_LDC (U8/clkdiv_2_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_60_o1 (U8/rst_clkdiv[31]_AND_60_o)
+     LDC:CLR                   0.325          U8/clkdiv_2_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_57_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_3_LDC (LATCH)
+  Destination:       U8/clkdiv_3_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_57_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_57_o falling
+
+  Data Path: U8/clkdiv_3_LDC to U8/clkdiv_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_3_LDC (U8/clkdiv_3_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_58_o1 (U8/rst_clkdiv[31]_AND_58_o)
+     LDC:CLR                   0.325          U8/clkdiv_3_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_55_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_4_LDC (LATCH)
+  Destination:       U8/clkdiv_4_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_55_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_55_o falling
+
+  Data Path: U8/clkdiv_4_LDC to U8/clkdiv_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_4_LDC (U8/clkdiv_4_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_56_o1 (U8/rst_clkdiv[31]_AND_56_o)
+     LDC:CLR                   0.325          U8/clkdiv_4_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_53_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_5_LDC (LATCH)
+  Destination:       U8/clkdiv_5_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_53_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_53_o falling
+
+  Data Path: U8/clkdiv_5_LDC to U8/clkdiv_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_5_LDC (U8/clkdiv_5_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_54_o1 (U8/rst_clkdiv[31]_AND_54_o)
+     LDC:CLR                   0.325          U8/clkdiv_5_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_51_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_6_LDC (LATCH)
+  Destination:       U8/clkdiv_6_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_51_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_51_o falling
+
+  Data Path: U8/clkdiv_6_LDC to U8/clkdiv_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_6_LDC (U8/clkdiv_6_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_52_o1 (U8/rst_clkdiv[31]_AND_52_o)
+     LDC:CLR                   0.325          U8/clkdiv_6_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_49_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_7_LDC (LATCH)
+  Destination:       U8/clkdiv_7_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_49_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_49_o falling
+
+  Data Path: U8/clkdiv_7_LDC to U8/clkdiv_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_7_LDC (U8/clkdiv_7_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_50_o1 (U8/rst_clkdiv[31]_AND_50_o)
+     LDC:CLR                   0.325          U8/clkdiv_7_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_47_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_8_LDC (LATCH)
+  Destination:       U8/clkdiv_8_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_47_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_47_o falling
+
+  Data Path: U8/clkdiv_8_LDC to U8/clkdiv_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_8_LDC (U8/clkdiv_8_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_48_o1 (U8/rst_clkdiv[31]_AND_48_o)
+     LDC:CLR                   0.325          U8/clkdiv_8_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_45_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_9_LDC (LATCH)
+  Destination:       U8/clkdiv_9_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_45_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_45_o falling
+
+  Data Path: U8/clkdiv_9_LDC to U8/clkdiv_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_9_LDC (U8/clkdiv_9_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_46_o1 (U8/rst_clkdiv[31]_AND_46_o)
+     LDC:CLR                   0.325          U8/clkdiv_9_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_43_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_10_LDC (LATCH)
+  Destination:       U8/clkdiv_10_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_43_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_43_o falling
+
+  Data Path: U8/clkdiv_10_LDC to U8/clkdiv_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_10_LDC (U8/clkdiv_10_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_44_o1 (U8/rst_clkdiv[31]_AND_44_o)
+     LDC:CLR                   0.325          U8/clkdiv_10_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_41_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_11_LDC (LATCH)
+  Destination:       U8/clkdiv_11_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_41_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_41_o falling
+
+  Data Path: U8/clkdiv_11_LDC to U8/clkdiv_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_11_LDC (U8/clkdiv_11_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_42_o1 (U8/rst_clkdiv[31]_AND_42_o)
+     LDC:CLR                   0.325          U8/clkdiv_11_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_39_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_12_LDC (LATCH)
+  Destination:       U8/clkdiv_12_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_39_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_39_o falling
+
+  Data Path: U8/clkdiv_12_LDC to U8/clkdiv_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_12_LDC (U8/clkdiv_12_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_40_o1 (U8/rst_clkdiv[31]_AND_40_o)
+     LDC:CLR                   0.325          U8/clkdiv_12_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_37_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_13_LDC (LATCH)
+  Destination:       U8/clkdiv_13_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_37_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_37_o falling
+
+  Data Path: U8/clkdiv_13_LDC to U8/clkdiv_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_13_LDC (U8/clkdiv_13_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_38_o1 (U8/rst_clkdiv[31]_AND_38_o)
+     LDC:CLR                   0.325          U8/clkdiv_13_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_35_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_14_LDC (LATCH)
+  Destination:       U8/clkdiv_14_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_35_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_35_o falling
+
+  Data Path: U8/clkdiv_14_LDC to U8/clkdiv_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_14_LDC (U8/clkdiv_14_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_36_o1 (U8/rst_clkdiv[31]_AND_36_o)
+     LDC:CLR                   0.325          U8/clkdiv_14_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_33_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_15_LDC (LATCH)
+  Destination:       U8/clkdiv_15_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_33_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_33_o falling
+
+  Data Path: U8/clkdiv_15_LDC to U8/clkdiv_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_15_LDC (U8/clkdiv_15_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_34_o1 (U8/rst_clkdiv[31]_AND_34_o)
+     LDC:CLR                   0.325          U8/clkdiv_15_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_31_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_16_LDC (LATCH)
+  Destination:       U8/clkdiv_16_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_31_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_31_o falling
+
+  Data Path: U8/clkdiv_16_LDC to U8/clkdiv_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_16_LDC (U8/clkdiv_16_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_32_o1 (U8/rst_clkdiv[31]_AND_32_o)
+     LDC:CLR                   0.325          U8/clkdiv_16_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_29_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_17_LDC (LATCH)
+  Destination:       U8/clkdiv_17_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_29_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_29_o falling
+
+  Data Path: U8/clkdiv_17_LDC to U8/clkdiv_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_17_LDC (U8/clkdiv_17_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_30_o1 (U8/rst_clkdiv[31]_AND_30_o)
+     LDC:CLR                   0.325          U8/clkdiv_17_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_27_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_18_LDC (LATCH)
+  Destination:       U8/clkdiv_18_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_27_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_27_o falling
+
+  Data Path: U8/clkdiv_18_LDC to U8/clkdiv_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_18_LDC (U8/clkdiv_18_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_28_o1 (U8/rst_clkdiv[31]_AND_28_o)
+     LDC:CLR                   0.325          U8/clkdiv_18_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_25_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_19_LDC (LATCH)
+  Destination:       U8/clkdiv_19_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_25_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_25_o falling
+
+  Data Path: U8/clkdiv_19_LDC to U8/clkdiv_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_19_LDC (U8/clkdiv_19_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_26_o1 (U8/rst_clkdiv[31]_AND_26_o)
+     LDC:CLR                   0.325          U8/clkdiv_19_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_23_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_20_LDC (LATCH)
+  Destination:       U8/clkdiv_20_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_23_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_23_o falling
+
+  Data Path: U8/clkdiv_20_LDC to U8/clkdiv_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_20_LDC (U8/clkdiv_20_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_24_o1 (U8/rst_clkdiv[31]_AND_24_o)
+     LDC:CLR                   0.325          U8/clkdiv_20_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_21_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_21_LDC (LATCH)
+  Destination:       U8/clkdiv_21_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_21_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_21_o falling
+
+  Data Path: U8/clkdiv_21_LDC to U8/clkdiv_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_21_LDC (U8/clkdiv_21_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_22_o1 (U8/rst_clkdiv[31]_AND_22_o)
+     LDC:CLR                   0.325          U8/clkdiv_21_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_19_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_22_LDC (LATCH)
+  Destination:       U8/clkdiv_22_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_19_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_19_o falling
+
+  Data Path: U8/clkdiv_22_LDC to U8/clkdiv_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_22_LDC (U8/clkdiv_22_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_20_o1 (U8/rst_clkdiv[31]_AND_20_o)
+     LDC:CLR                   0.325          U8/clkdiv_22_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_17_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_23_LDC (LATCH)
+  Destination:       U8/clkdiv_23_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_17_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_17_o falling
+
+  Data Path: U8/clkdiv_23_LDC to U8/clkdiv_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_23_LDC (U8/clkdiv_23_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_18_o1 (U8/rst_clkdiv[31]_AND_18_o)
+     LDC:CLR                   0.325          U8/clkdiv_23_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_15_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_24_LDC (LATCH)
+  Destination:       U8/clkdiv_24_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_15_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_15_o falling
+
+  Data Path: U8/clkdiv_24_LDC to U8/clkdiv_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_24_LDC (U8/clkdiv_24_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_16_o1 (U8/rst_clkdiv[31]_AND_16_o)
+     LDC:CLR                   0.325          U8/clkdiv_24_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_13_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_25_LDC (LATCH)
+  Destination:       U8/clkdiv_25_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_13_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_13_o falling
+
+  Data Path: U8/clkdiv_25_LDC to U8/clkdiv_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_25_LDC (U8/clkdiv_25_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_14_o1 (U8/rst_clkdiv[31]_AND_14_o)
+     LDC:CLR                   0.325          U8/clkdiv_25_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_11_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_26_LDC (LATCH)
+  Destination:       U8/clkdiv_26_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_11_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_11_o falling
+
+  Data Path: U8/clkdiv_26_LDC to U8/clkdiv_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_26_LDC (U8/clkdiv_26_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_12_o1 (U8/rst_clkdiv[31]_AND_12_o)
+     LDC:CLR                   0.325          U8/clkdiv_26_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_9_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_27_LDC (LATCH)
+  Destination:       U8/clkdiv_27_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_9_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_9_o falling
+
+  Data Path: U8/clkdiv_27_LDC to U8/clkdiv_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_27_LDC (U8/clkdiv_27_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_10_o1 (U8/rst_clkdiv[31]_AND_10_o)
+     LDC:CLR                   0.325          U8/clkdiv_27_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_7_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_28_LDC (LATCH)
+  Destination:       U8/clkdiv_28_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_7_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_7_o falling
+
+  Data Path: U8/clkdiv_28_LDC to U8/clkdiv_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_28_LDC (U8/clkdiv_28_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_8_o1 (U8/rst_clkdiv[31]_AND_8_o)
+     LDC:CLR                   0.325          U8/clkdiv_28_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_3_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_30_LDC (LATCH)
+  Destination:       U8/clkdiv_30_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_3_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_3_o falling
+
+  Data Path: U8/clkdiv_30_LDC to U8/clkdiv_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_30_LDC (U8/clkdiv_30_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_4_o1 (U8/rst_clkdiv[31]_AND_4_o)
+     LDC:CLR                   0.325          U8/clkdiv_30_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/rst_clkdiv[31]_AND_5_o'
+  Clock period: 1.788ns (frequency: 559.284MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.788ns (Levels of Logic = 1)
+  Source:            U8/clkdiv_29_LDC (LATCH)
+  Destination:       U8/clkdiv_29_LDC (LATCH)
+  Source Clock:      U8/rst_clkdiv[31]_AND_5_o falling
+  Destination Clock: U8/rst_clkdiv[31]_AND_5_o falling
+
+  Data Path: U8/clkdiv_29_LDC to U8/clkdiv_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_29_LDC (U8/clkdiv_29_LDC)
+     LUT4:I1->O            2   0.053   0.405  U8/rst_clkdiv[31]_AND_6_o1 (U8/rst_clkdiv[31]_AND_6_o)
+     LDC:CLR                   0.325          U8/clkdiv_29_LDC
+    ----------------------------------------
+    Total                      1.788ns (0.767ns logic, 1.021ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 1227 / 132
+-------------------------------------------------------------------------
+Offset:              2.518ns (Levels of Logic = 9)
+  Source:            SW<3> (PAD)
+  Destination:       U9/SW_OK_0 (FF)
+  Destination Clock: clk_100mhz rising
+
+  Data Path: SW<3> to U9/SW_OK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   0.000   0.788  SW_3_IBUF (SW_3_IBUF)
+     begin scope: 'U9:SW<3>'
+     LUT6:I2->O            1   0.053   0.000  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_lut<1> (Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_lut<1>)
+     MUXCY:S->O            1   0.291   0.000  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<1> (Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<2> (Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<3> (Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<4> (Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<4>)
+     MUXCY:CI->O          43   0.015   0.554  Mcompar_sw_temp[15]_SW[15]_not_equal_100_o_cy<5> (sw_temp[15]_SW[15]_not_equal_100_o)
+     INV:I->O             17   0.067   0.505  _n0243_inv1_cepot_cepot_INV_0 (_n0243_inv1_cepot_cepot)
+     FDE:CE                    0.200          SW_OK_0
+    ----------------------------------------
+    Total                      2.518ns (0.671ns logic, 1.847ns route)
+                                       (26.6% logic, 73.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U9/clk1'
+  Total number of paths / destination ports: 176 / 41
+-------------------------------------------------------------------------
+Offset:              2.542ns (Levels of Logic = 6)
+  Source:            BTN_y<3> (PAD)
+  Destination:       U9/Key_x_1 (FF)
+  Destination Clock: U9/clk1 rising
+
+  Data Path: BTN_y<3> to U9/Key_x_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.000   0.668  BTN_y_3_IBUF (BTN_y_3_IBUF)
+     begin scope: 'U9:Key_y<3>'
+     LUT4:I0->O           12   0.053   0.811  out1 (n0016)
+     LUT6:I0->O            3   0.053   0.427  _n0295<0>1 (_n0295<0>)
+     LUT6:I5->O            1   0.053   0.413  Key_x[4]_PWR_1_o_select_74_OUT<1>1 (Key_x[4]_PWR_1_o_select_74_OUT<4>)
+     LUT3:I2->O            1   0.053   0.000  Key_x_4_dpot (Key_x_4_dpot)
+     FDE:D                     0.011          Key_x_4
+    ----------------------------------------
+    Total                      2.542ns (0.223ns logic, 2.319ns route)
+                                       (8.8% logic, 91.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U6/P7SEG/sh_clk'
+  Total number of paths / destination ports: 752 / 64
+-------------------------------------------------------------------------
+Offset:              6.522ns (Levels of Logic = 14)
+  Source:            SW<3> (PAD)
+  Destination:       U6/P7SEG/Q_4 (FF)
+  Destination Clock: U6/P7SEG/sh_clk falling
+
+  Data Path: SW<3> to U6/P7SEG/Q_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   0.000   0.878  SW_3_IBUF (SW_3_IBUF)
+     begin scope: 'U2:a<4>'
+     LUT5:I0->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int5711_SW0 (N56)
+     LUT6:I5->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int5711 (spo<28>)
+     end scope: 'U2:spo<28>'
+     begin scope: 'U5:data6<28>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_320 (MUX1_DispData/Mmux_o_320)
+     MUXF7:I1->O          16   0.217   0.497  MUX1_DispData/Mmux_o_2_f7_19 (Disp_num<28>)
+     end scope: 'U5:Disp_num<28>'
+     begin scope: 'U6:Hexs<28>'
+     INV:I->O              6   0.067   0.772  SM1/HTS0/MSEG/XLXI_4 (SM1/HTS0/MSEG/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  SM1/HTS0/MSEG/XLXI_28 (SM1/HTS0/MSEG/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  SM1/HTS0/MSEG/XLXI_29 (SM1/HTS0/MSEG/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  SM1/HTS0/MSEG/XLXI_50 (a<4>)
+     LUT3:I2->O            1   0.053   0.725  P7SEG/mux10911_SW0 (N40)
+     LUT5:I0->O            1   0.053   0.000  P7SEG/mux10912 (P7SEG/S1_GND_13_o_wide_mux_1_OUT<4>)
+     FDE_1:D                   0.011          P7SEG/Q_4
+    ----------------------------------------
+    Total                      6.522ns (0.719ns logic, 5.803ns route)
+                                       (11.0% logic, 89.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U9/clk1'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              0.779ns (Levels of Logic = 2)
+  Source:            U9/Key_x_4 (FF)
+  Destination:       BTN_x<4> (PAD)
+  Source Clock:      U9/clk1 rising
+
+  Data Path: U9/Key_x_4 to BTN_x<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.282   0.497  Key_x_4 (Key_x<4>)
+     end scope: 'U9:Key_x<4>'
+     OBUF:I->O                 0.000          BTN_x_4_OBUF (BTN_x<4>)
+    ----------------------------------------
+    Total                      0.779ns (0.282ns logic, 0.497ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_53_o'
+  Total number of paths / destination ports: 23 / 8
+-------------------------------------------------------------------------
+Offset:              6.615ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_5_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_53_o falling
+
+  Data Path: U8/clkdiv_5_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_5_LDC (U8/clkdiv_5_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_51 (U8/clkdiv_5)
+     begin scope: 'U5:data2<5>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_427 (MUX1_DispData/Mmux_o_427)
+     MUXF7:I0->O          15   0.214   0.577  MUX1_DispData/Mmux_o_2_f7_26 (Disp_num<5>)
+     end scope: 'U5:Disp_num<5>'
+     begin scope: 'U61:Hexs<5>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_41 (M2/Mmux_Hexo_41)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.615ns (1.255ns logic, 5.360ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_5_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.735ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_29_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_5_o falling
+
+  Data Path: U8/clkdiv_29_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_29_LDC (U8/clkdiv_29_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_291 (U8/clkdiv_29)
+     begin scope: 'U5:data2<29>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_421 (MUX1_DispData/Mmux_o_421)
+     MUXF7:I0->O          15   0.214   0.694  MUX1_DispData/Mmux_o_2_f7_20 (Disp_num<29>)
+     end scope: 'U5:Disp_num<29>'
+     begin scope: 'U61:Hexs<29>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_31 (M2/Mmux_Hexo_31)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.735ns (1.258ns logic, 5.477ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_21_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.618ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_21_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_21_o falling
+
+  Data Path: U8/clkdiv_21_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_21_LDC (U8/clkdiv_21_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_211 (U8/clkdiv_21)
+     begin scope: 'U5:data2<21>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_413 (MUX1_DispData/Mmux_o_413)
+     MUXF7:I0->O          15   0.214   0.577  MUX1_DispData/Mmux_o_2_f7_12 (Disp_num<21>)
+     end scope: 'U5:Disp_num<21>'
+     begin scope: 'U61:Hexs<21>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_31 (M2/Mmux_Hexo_31)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.618ns (1.258ns logic, 5.360ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_55_o'
+  Total number of paths / destination ports: 23 / 8
+-------------------------------------------------------------------------
+Offset:              6.628ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_4_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_55_o falling
+
+  Data Path: U8/clkdiv_4_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_4_LDC (U8/clkdiv_4_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_41 (U8/clkdiv_4)
+     begin scope: 'U5:data2<4>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_426 (MUX1_DispData/Mmux_o_426)
+     MUXF7:I0->O          16   0.214   0.583  MUX1_DispData/Mmux_o_2_f7_25 (Disp_num<4>)
+     end scope: 'U5:Disp_num<4>'
+     begin scope: 'U61:Hexs<4>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_4 (M2/Mmux_Hexo_4)
+     MUXF7:I0->O          12   0.214   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.628ns (1.255ns logic, 5.373ns route)
+                                       (18.9% logic, 81.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_39_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.745ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_12_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_39_o falling
+
+  Data Path: U8/clkdiv_12_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_12_LDC (U8/clkdiv_12_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_121 (U8/clkdiv_12)
+     begin scope: 'U5:data2<12>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_43 (MUX1_DispData/Mmux_o_43)
+     MUXF7:I0->O          16   0.214   0.700  MUX1_DispData/Mmux_o_2_f7_2 (Disp_num<12>)
+     end scope: 'U5:Disp_num<12>'
+     begin scope: 'U61:Hexs<12>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_4 (M2/Mmux_Hexo_4)
+     MUXF7:I0->O          12   0.214   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.745ns (1.255ns logic, 5.490ns route)
+                                       (18.6% logic, 81.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_23_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.638ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_20_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_23_o falling
+
+  Data Path: U8/clkdiv_20_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_20_LDC (U8/clkdiv_20_LDC)
+     LUT3:I0->O            5   0.053   0.662  U8/clkdiv_201 (U8/clkdiv_20)
+     begin scope: 'U5:data2<20>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_412 (MUX1_DispData/Mmux_o_412)
+     MUXF7:I0->O          16   0.214   0.583  MUX1_DispData/Mmux_o_2_f7_11 (Disp_num<20>)
+     end scope: 'U5:Disp_num<20>'
+     begin scope: 'U61:Hexs<20>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.638ns (1.258ns logic, 5.380ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_33_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.616ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_15_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_33_o falling
+
+  Data Path: U8/clkdiv_15_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_15_LDC (U8/clkdiv_15_LDC)
+     LUT3:I0->O            3   0.053   0.649  U8/clkdiv_151 (U8/clkdiv_15)
+     begin scope: 'U5:data2<15>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_46 (MUX1_DispData/Mmux_o_46)
+     MUXF7:I0->O          12   0.214   0.674  MUX1_DispData/Mmux_o_2_f7_5 (Disp_num<15>)
+     end scope: 'U5:Disp_num<15>'
+     begin scope: 'U61:Hexs<15>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_43 (M2/Mmux_Hexo_43)
+     MUXF7:I0->O           8   0.214   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.616ns (1.255ns logic, 5.361ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_1_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.625ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_31_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_1_o falling
+
+  Data Path: U8/clkdiv_31_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_31_LDC (U8/clkdiv_31_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_311 (U8/clkdiv_31)
+     begin scope: 'U5:data2<31>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_424 (MUX1_DispData/Mmux_o_424)
+     MUXF7:I0->O          12   0.214   0.674  MUX1_DispData/Mmux_o_2_f7_23 (Disp_num<31>)
+     end scope: 'U5:Disp_num<31>'
+     begin scope: 'U61:Hexs<31>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_33 (M2/Mmux_Hexo_33)
+     MUXF7:I1->O           8   0.217   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.625ns (1.258ns logic, 5.367ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_17_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.508ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_23_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_17_o falling
+
+  Data Path: U8/clkdiv_23_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_23_LDC (U8/clkdiv_23_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_231 (U8/clkdiv_23)
+     begin scope: 'U5:data2<23>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_415 (MUX1_DispData/Mmux_o_415)
+     MUXF7:I0->O          12   0.214   0.557  MUX1_DispData/Mmux_o_2_f7_14 (Disp_num<23>)
+     end scope: 'U5:Disp_num<23>'
+     begin scope: 'U61:Hexs<23>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_33 (M2/Mmux_Hexo_33)
+     MUXF7:I1->O           8   0.217   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.508ns (1.258ns logic, 5.250ns route)
+                                       (19.3% logic, 80.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_51_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.601ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_6_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_51_o falling
+
+  Data Path: U8/clkdiv_6_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_6_LDC (U8/clkdiv_6_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_61 (U8/clkdiv_6)
+     begin scope: 'U5:data2<6>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_428 (MUX1_DispData/Mmux_o_428)
+     MUXF7:I0->O          15   0.214   0.577  MUX1_DispData/Mmux_o_2_f7_27 (Disp_num<6>)
+     end scope: 'U5:Disp_num<6>'
+     begin scope: 'U61:Hexs<6>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_42 (M2/Mmux_Hexo_42)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.601ns (1.255ns logic, 5.346ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_35_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.718ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_14_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_35_o falling
+
+  Data Path: U8/clkdiv_14_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_14_LDC (U8/clkdiv_14_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_141 (U8/clkdiv_14)
+     begin scope: 'U5:data2<14>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_45 (MUX1_DispData/Mmux_o_45)
+     MUXF7:I0->O          15   0.214   0.694  MUX1_DispData/Mmux_o_2_f7_4 (Disp_num<14>)
+     end scope: 'U5:Disp_num<14>'
+     begin scope: 'U61:Hexs<14>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_42 (M2/Mmux_Hexo_42)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.718ns (1.255ns logic, 5.463ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_37_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.732ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_13_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_37_o falling
+
+  Data Path: U8/clkdiv_13_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_13_LDC (U8/clkdiv_13_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_131 (U8/clkdiv_13)
+     begin scope: 'U5:data2<13>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_44 (MUX1_DispData/Mmux_o_44)
+     MUXF7:I0->O          15   0.214   0.694  MUX1_DispData/Mmux_o_2_f7_3 (Disp_num<13>)
+     end scope: 'U5:Disp_num<13>'
+     begin scope: 'U61:Hexs<13>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_41 (M2/Mmux_Hexo_41)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.732ns (1.255ns logic, 5.477ns route)
+                                       (18.6% logic, 81.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_19_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.604ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_22_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_19_o falling
+
+  Data Path: U8/clkdiv_22_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_22_LDC (U8/clkdiv_22_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_221 (U8/clkdiv_22)
+     begin scope: 'U5:data2<22>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_414 (MUX1_DispData/Mmux_o_414)
+     MUXF7:I0->O          15   0.214   0.577  MUX1_DispData/Mmux_o_2_f7_13 (Disp_num<22>)
+     end scope: 'U5:Disp_num<22>'
+     begin scope: 'U61:Hexs<22>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_32 (M2/Mmux_Hexo_32)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.604ns (1.258ns logic, 5.346ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_61_o'
+  Total number of paths / destination ports: 23 / 8
+-------------------------------------------------------------------------
+Offset:              6.543ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_1_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_61_o falling
+
+  Data Path: U8/clkdiv_1_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_1_LDC (U8/clkdiv_1_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_110 (U8/clkdiv_1)
+     begin scope: 'U5:data2<1>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_411 (MUX1_DispData/Mmux_o_411)
+     MUXF7:I0->O          15   0.214   0.505  MUX1_DispData/Mmux_o_2_f7_10 (Disp_num<1>)
+     end scope: 'U5:Disp_num<1>'
+     begin scope: 'U61:Hexs<1>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_41 (M2/Mmux_Hexo_41)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.543ns (1.255ns logic, 5.288ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_29_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.546ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_17_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_29_o falling
+
+  Data Path: U8/clkdiv_17_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_17_LDC (U8/clkdiv_17_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_171 (U8/clkdiv_17)
+     begin scope: 'U5:data2<17>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_48 (MUX1_DispData/Mmux_o_48)
+     MUXF7:I0->O          15   0.214   0.505  MUX1_DispData/Mmux_o_2_f7_7 (Disp_num<17>)
+     end scope: 'U5:Disp_num<17>'
+     begin scope: 'U61:Hexs<17>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_31 (M2/Mmux_Hexo_31)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.546ns (1.258ns logic, 5.288ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_63_o'
+  Total number of paths / destination ports: 23 / 8
+-------------------------------------------------------------------------
+Offset:              6.556ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_0_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_63_o falling
+
+  Data Path: U8/clkdiv_0_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.389   0.622  U8/clkdiv_0_LDC (U8/clkdiv_0_LDC)
+     LUT3:I0->O            3   0.053   0.649  U8/clkdiv_01 (U8/clkdiv_0)
+     begin scope: 'U5:data2<0>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_4 (MUX1_DispData/Mmux_o_4)
+     MUXF7:I0->O          16   0.214   0.511  MUX1_DispData/Mmux_o_2_f7 (Disp_num<0>)
+     end scope: 'U5:Disp_num<0>'
+     begin scope: 'U61:Hexs<0>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_4 (M2/Mmux_Hexo_4)
+     MUXF7:I0->O          12   0.214   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.556ns (1.255ns logic, 5.301ns route)
+                                       (19.1% logic, 80.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_47_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.778ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_8_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_47_o falling
+
+  Data Path: U8/clkdiv_8_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_8_LDC (U8/clkdiv_8_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_81 (U8/clkdiv_8)
+     begin scope: 'U5:data2<8>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_430 (MUX1_DispData/Mmux_o_430)
+     MUXF7:I0->O          16   0.214   0.733  MUX1_DispData/Mmux_o_2_f7_29 (Disp_num<8>)
+     end scope: 'U5:Disp_num<8>'
+     begin scope: 'U61:Hexs<8>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_4 (M2/Mmux_Hexo_4)
+     MUXF7:I0->O          12   0.214   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.778ns (1.255ns logic, 5.523ns route)
+                                       (18.5% logic, 81.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_49_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.512ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_7_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_49_o falling
+
+  Data Path: U8/clkdiv_7_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_7_LDC (U8/clkdiv_7_LDC)
+     LUT3:I0->O            5   0.053   0.662  U8/clkdiv_71 (U8/clkdiv_7)
+     begin scope: 'U5:data2<7>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_429 (MUX1_DispData/Mmux_o_429)
+     MUXF7:I0->O          12   0.214   0.557  MUX1_DispData/Mmux_o_2_f7_28 (Disp_num<7>)
+     end scope: 'U5:Disp_num<7>'
+     begin scope: 'U61:Hexs<7>'
+     LUT6:I4->O            1   0.053   0.000  M2/Mmux_Hexo_43 (M2/Mmux_Hexo_43)
+     MUXF7:I0->O           8   0.214   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.512ns (1.255ns logic, 5.257ns route)
+                                       (19.3% logic, 80.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_31_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.559ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_16_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_31_o falling
+
+  Data Path: U8/clkdiv_16_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_16_LDC (U8/clkdiv_16_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_161 (U8/clkdiv_16)
+     begin scope: 'U5:data2<16>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_47 (MUX1_DispData/Mmux_o_47)
+     MUXF7:I0->O          16   0.214   0.511  MUX1_DispData/Mmux_o_2_f7_6 (Disp_num<16>)
+     end scope: 'U5:Disp_num<16>'
+     begin scope: 'U61:Hexs<16>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.559ns (1.258ns logic, 5.301ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_57_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.433ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_3_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_57_o falling
+
+  Data Path: U8/clkdiv_3_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_3_LDC (U8/clkdiv_3_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_31 (U8/clkdiv_3)
+     begin scope: 'U5:data2<3>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_425 (MUX1_DispData/Mmux_o_425)
+     MUXF7:I0->O          12   0.214   0.485  MUX1_DispData/Mmux_o_2_f7_24 (Disp_num<3>)
+     end scope: 'U5:Disp_num<3>'
+     begin scope: 'U61:Hexs<3>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_43 (M2/Mmux_Hexo_43)
+     MUXF7:I0->O           8   0.214   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.433ns (1.255ns logic, 5.178ns route)
+                                       (19.5% logic, 80.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_41_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.655ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_11_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_41_o falling
+
+  Data Path: U8/clkdiv_11_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_11_LDC (U8/clkdiv_11_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_111 (U8/clkdiv_11)
+     begin scope: 'U5:data2<11>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_42 (MUX1_DispData/Mmux_o_42)
+     MUXF7:I0->O          12   0.214   0.707  MUX1_DispData/Mmux_o_2_f7_1 (Disp_num<11>)
+     end scope: 'U5:Disp_num<11>'
+     begin scope: 'U61:Hexs<11>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_43 (M2/Mmux_Hexo_43)
+     MUXF7:I0->O           8   0.214   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.655ns (1.255ns logic, 5.400ns route)
+                                       (18.9% logic, 81.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_59_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.529ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_2_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_59_o falling
+
+  Data Path: U8/clkdiv_2_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_2_LDC (U8/clkdiv_2_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_210 (U8/clkdiv_2)
+     begin scope: 'U5:data2<2>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_422 (MUX1_DispData/Mmux_o_422)
+     MUXF7:I0->O          15   0.214   0.505  MUX1_DispData/Mmux_o_2_f7_21 (Disp_num<2>)
+     end scope: 'U5:Disp_num<2>'
+     begin scope: 'U61:Hexs<2>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_42 (M2/Mmux_Hexo_42)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.529ns (1.255ns logic, 5.274ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_43_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.758ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_10_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_43_o falling
+
+  Data Path: U8/clkdiv_10_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_10_LDC (U8/clkdiv_10_LDC)
+     LUT3:I0->O            5   0.053   0.662  U8/clkdiv_101 (U8/clkdiv_10)
+     begin scope: 'U5:data2<10>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_41 (MUX1_DispData/Mmux_o_41)
+     MUXF7:I0->O          15   0.214   0.727  MUX1_DispData/Mmux_o_2_f7_0 (Disp_num<10>)
+     end scope: 'U5:Disp_num<10>'
+     begin scope: 'U61:Hexs<10>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_42 (M2/Mmux_Hexo_42)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.758ns (1.255ns logic, 5.503ns route)
+                                       (18.6% logic, 81.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_45_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.765ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_9_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_45_o falling
+
+  Data Path: U8/clkdiv_9_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_9_LDC (U8/clkdiv_9_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_91 (U8/clkdiv_9)
+     begin scope: 'U5:data2<9>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_431 (MUX1_DispData/Mmux_o_431)
+     MUXF7:I0->O          15   0.214   0.727  MUX1_DispData/Mmux_o_2_f7_30 (Disp_num<9>)
+     end scope: 'U5:Disp_num<9>'
+     begin scope: 'U61:Hexs<9>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_41 (M2/Mmux_Hexo_41)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_0 (Hex<1>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_3 (M1/XLXN_62)
+     AND3:I1->O            1   0.053   0.739  M1/XLXI_35 (M1/XLXN_172)
+     OR3:I0->O             1   0.053   0.725  M1/XLXI_36 (M1/XLXN_212)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_51 (SEG_TXT<4>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o5 (SEGMENT<4>)
+     end scope: 'U61:SEGMENT<4>'
+     OBUF:I->O                 0.000          SEGMENT_4_OBUF (SEGMENT<4>)
+    ----------------------------------------
+    Total                      6.765ns (1.255ns logic, 5.510ns route)
+                                       (18.6% logic, 81.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_3_o'
+  Total number of paths / destination ports: 25 / 8
+-------------------------------------------------------------------------
+Offset:              6.721ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_30_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_3_o falling
+
+  Data Path: U8/clkdiv_30_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_30_LDC (U8/clkdiv_30_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_301 (U8/clkdiv_30)
+     begin scope: 'U5:data2<30>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_423 (MUX1_DispData/Mmux_o_423)
+     MUXF7:I0->O          15   0.214   0.694  MUX1_DispData/Mmux_o_2_f7_22 (Disp_num<30>)
+     end scope: 'U5:Disp_num<30>'
+     begin scope: 'U61:Hexs<30>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_32 (M2/Mmux_Hexo_32)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.721ns (1.258ns logic, 5.463ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_9_o'
+  Total number of paths / destination ports: 745 / 8
+-------------------------------------------------------------------------
+Offset:              8.164ns (Levels of Logic = 16)
+  Source:            U8/clkdiv_27_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_9_o falling
+
+  Data Path: U8/clkdiv_27_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_27_LDC (U8/clkdiv_27_LDC)
+     LUT3:I0->O           35   0.053   0.878  U8/clkdiv_271 (U8/clkdiv_27)
+     begin scope: 'U2:a<3>'
+     LUT6:I1->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int1711_SW0 (N14)
+     LUT5:I4->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int1711 (spo<8>)
+     end scope: 'U2:spo<8>'
+     begin scope: 'U5:data6<8>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_330 (MUX1_DispData/Mmux_o_330)
+     MUXF7:I1->O          16   0.217   0.733  MUX1_DispData/Mmux_o_2_f7_29 (Disp_num<8>)
+     end scope: 'U5:Disp_num<8>'
+     begin scope: 'U61:Hexs<8>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_4 (M2/Mmux_Hexo_4)
+     MUXF7:I0->O          12   0.214   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      8.164ns (1.364ns logic, 6.800ns route)
+                                       (16.7% logic, 83.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_13_o'
+  Total number of paths / destination ports: 751 / 8
+-------------------------------------------------------------------------
+Offset:              8.169ns (Levels of Logic = 16)
+  Source:            U8/clkdiv_25_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_13_o falling
+
+  Data Path: U8/clkdiv_25_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_25_LDC (U8/clkdiv_25_LDC)
+     LUT3:I0->O           44   0.053   0.880  U8/clkdiv_251 (U8/clkdiv_25)
+     begin scope: 'U2:a<1>'
+     LUT6:I1->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4911_SW0 (N46)
+     LUT5:I4->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4911 (spo<24>)
+     end scope: 'U2:spo<24>'
+     begin scope: 'U5:data6<24>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_316 (MUX1_DispData/Mmux_o_316)
+     MUXF7:I1->O          16   0.217   0.733  MUX1_DispData/Mmux_o_2_f7_15 (Disp_num<24>)
+     end scope: 'U5:Disp_num<24>'
+     begin scope: 'U61:Hexs<24>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      8.169ns (1.367ns logic, 6.802ns route)
+                                       (16.7% logic, 83.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_11_o'
+  Total number of paths / destination ports: 745 / 8
+-------------------------------------------------------------------------
+Offset:              8.137ns (Levels of Logic = 16)
+  Source:            U8/clkdiv_26_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_11_o falling
+
+  Data Path: U8/clkdiv_26_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_26_LDC (U8/clkdiv_26_LDC)
+     LUT3:I0->O           35   0.053   0.878  U8/clkdiv_261 (U8/clkdiv_26)
+     begin scope: 'U2:a<2>'
+     LUT5:I0->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int2111_SW0 (N18)
+     LUT6:I5->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int2111 (spo<10>)
+     end scope: 'U2:spo<10>'
+     begin scope: 'U5:data6<10>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_31 (MUX1_DispData/Mmux_o_31)
+     MUXF7:I1->O          15   0.217   0.727  MUX1_DispData/Mmux_o_2_f7_0 (Disp_num<10>)
+     end scope: 'U5:Disp_num<10>'
+     begin scope: 'U61:Hexs<10>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_42 (M2/Mmux_Hexo_42)
+     MUXF7:I0->O          11   0.214   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      8.137ns (1.364ns logic, 6.773ns route)
+                                       (16.8% logic, 83.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_15_o'
+  Total number of paths / destination ports: 721 / 8
+-------------------------------------------------------------------------
+Offset:              8.044ns (Levels of Logic = 16)
+  Source:            U8/clkdiv_24_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_15_o falling
+
+  Data Path: U8/clkdiv_24_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_24_LDC (U8/clkdiv_24_LDC)
+     LUT3:I0->O           34   0.053   0.788  U8/clkdiv_241 (U8/clkdiv_24)
+     begin scope: 'U2:a<0>'
+     LUT5:I1->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int5711_SW0 (N56)
+     LUT6:I5->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int5711 (spo<28>)
+     end scope: 'U2:spo<28>'
+     begin scope: 'U5:data6<28>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_320 (MUX1_DispData/Mmux_o_320)
+     MUXF7:I1->O          16   0.217   0.700  MUX1_DispData/Mmux_o_2_f7_19 (Disp_num<28>)
+     end scope: 'U5:Disp_num<28>'
+     begin scope: 'U61:Hexs<28>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      8.044ns (1.367ns logic, 6.677ns route)
+                                       (17.0% logic, 83.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_7_o'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              6.748ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_28_LDC (LATCH)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_7_o falling
+
+  Data Path: U8/clkdiv_28_LDC to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_28_LDC (U8/clkdiv_28_LDC)
+     LUT3:I0->O            4   0.053   0.655  U8/clkdiv_281 (U8/clkdiv_28)
+     begin scope: 'U5:data2<28>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_420 (MUX1_DispData/Mmux_o_420)
+     MUXF7:I0->O          16   0.214   0.700  MUX1_DispData/Mmux_o_2_f7_19 (Disp_num<28>)
+     end scope: 'U5:Disp_num<28>'
+     begin scope: 'U61:Hexs<28>'
+     LUT6:I3->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      6.748ns (1.258ns logic, 5.490ns route)
+                                       (18.6% logic, 81.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_27_o'
+  Total number of paths / destination ports: 225 / 12
+-------------------------------------------------------------------------
+Offset:              6.664ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_18_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_27_o falling
+
+  Data Path: U8/clkdiv_18_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_18_LDC (U8/clkdiv_18_LDC)
+     LUT3:I0->O           28   0.053   0.787  U8/clkdiv_181 (U8/clkdiv_18)
+     begin scope: 'U5:data2<18>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_49 (MUX1_DispData/Mmux_o_49)
+     MUXF7:I0->O          15   0.214   0.505  MUX1_DispData/Mmux_o_2_f7_8 (Disp_num<18>)
+     end scope: 'U5:Disp_num<18>'
+     begin scope: 'U61:Hexs<18>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_32 (M2/Mmux_Hexo_32)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.664ns (1.258ns logic, 5.406ns route)
+                                       (18.9% logic, 81.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/rst_clkdiv[31]_AND_25_o'
+  Total number of paths / destination ports: 225 / 12
+-------------------------------------------------------------------------
+Offset:              6.568ns (Levels of Logic = 13)
+  Source:            U8/clkdiv_19_LDC (LATCH)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      U8/rst_clkdiv[31]_AND_25_o falling
+
+  Data Path: U8/clkdiv_19_LDC to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.389   0.616  U8/clkdiv_19_LDC (U8/clkdiv_19_LDC)
+     LUT3:I0->O           28   0.053   0.787  U8/clkdiv_191 (U8/clkdiv_19)
+     begin scope: 'U5:data2<19>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_410 (MUX1_DispData/Mmux_o_410)
+     MUXF7:I0->O          12   0.214   0.485  MUX1_DispData/Mmux_o_2_f7_9 (Disp_num<19>)
+     end scope: 'U5:Disp_num<19>'
+     begin scope: 'U61:Hexs<19>'
+     LUT6:I5->O            1   0.053   0.000  M2/Mmux_Hexo_33 (M2/Mmux_Hexo_33)
+     MUXF7:I1->O           8   0.217   0.445  M2/Mmux_Hexo_2_f7_2 (Hex<3>)
+     INV:I->O             11   0.067   0.701  M1/XLXI_1 (M1/XLXN_14)
+     AND3:I2->O            1   0.053   0.739  M1/XLXI_39 (M1/XLXN_186)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      6.568ns (1.258ns logic, 5.310ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 13652 / 26
+-------------------------------------------------------------------------
+Offset:              7.945ns (Levels of Logic = 16)
+  Source:            U8/clkdiv_25_P_25 (FF)
+  Destination:       SEGMENT<6> (PAD)
+  Source Clock:      clk_100mhz rising
+
+  Data Path: U8/clkdiv_25_P_25 to SEGMENT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.282   0.499  U8/clkdiv_25_P_25 (U8/clkdiv_25_P_25)
+     LUT3:I1->O           44   0.053   0.880  U8/clkdiv_251 (U8/clkdiv_25)
+     begin scope: 'U2:a<1>'
+     LUT6:I1->O            1   0.053   0.413  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4911_SW0 (N46)
+     LUT5:I4->O            2   0.053   0.641  U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4911 (spo<24>)
+     end scope: 'U2:spo<24>'
+     begin scope: 'U5:data6<24>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_316 (MUX1_DispData/Mmux_o_316)
+     MUXF7:I1->O          16   0.217   0.733  MUX1_DispData/Mmux_o_2_f7_15 (Disp_num<24>)
+     end scope: 'U5:Disp_num<24>'
+     begin scope: 'U61:Hexs<24>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_3 (M2/Mmux_Hexo_3)
+     MUXF7:I1->O          12   0.217   0.471  M2/Mmux_Hexo_2_f7 (Hex<0>)
+     INV:I->O              6   0.067   0.772  M1/XLXI_4 (M1/XLXN_24)
+     AND4:I0->O            1   0.053   0.739  M1/XLXI_28 (M1/XLXN_141)
+     OR4:I0->O             1   0.053   0.725  M1/XLXI_29 (M1/XLXN_211)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_50 (SEG_TXT<3>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o4 (SEGMENT<3>)
+     end scope: 'U61:SEGMENT<3>'
+     OBUF:I->O                 0.000          SEGMENT_3_OBUF (SEGMENT<3>)
+    ----------------------------------------
+    Total                      7.945ns (1.260ns logic, 6.685ns route)
+                                       (15.9% logic, 84.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U6/P7SEG/sh_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.694ns (Levels of Logic = 2)
+  Source:            U6/P7SEG/Q_0 (FF)
+  Destination:       seg_sout (PAD)
+  Source Clock:      U6/P7SEG/sh_clk falling
+
+  Data Path: U6/P7SEG/Q_0 to seg_sout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            2   0.289   0.405  P7SEG/Q_0 (segsout)
+     end scope: 'U6:segsout'
+     OBUF:I->O                 0.000          seg_sout_OBUF (seg_sout)
+    ----------------------------------------
+    Total                      0.694ns (0.289ns logic, 0.405ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 721 / 9
+-------------------------------------------------------------------------
+Delay:               7.096ns (Levels of Logic = 16)
+  Source:            SW<3> (PAD)
+  Destination:       SEGMENT<5> (PAD)
+
+  Data Path: SW<3> to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   0.000   0.878  SW_3_IBUF (SW_3_IBUF)
+     begin scope: 'U2:a<4>'
+     LUT5:I0->O            1   0.053   0.413  spo<30>_SW0 (N50)
+     LUT6:I5->O            4   0.053   0.655  spo<30> (spo<26>)
+     end scope: 'U2:spo<26>'
+     begin scope: 'U5:data6<26>'
+     LUT6:I2->O            1   0.053   0.000  MUX1_DispData/Mmux_o_318 (MUX1_DispData/Mmux_o_318)
+     MUXF7:I1->O          15   0.217   0.727  MUX1_DispData/Mmux_o_2_f7_17 (Disp_num<26>)
+     end scope: 'U5:Disp_num<26>'
+     begin scope: 'U61:Hexs<26>'
+     LUT6:I2->O            1   0.053   0.000  M2/Mmux_Hexo_32 (M2/Mmux_Hexo_32)
+     MUXF7:I1->O          11   0.217   0.465  M2/Mmux_Hexo_2_f7_1 (Hex<2>)
+     INV:I->O              8   0.067   0.771  M1/XLXI_2 (M1/XLXN_61)
+     AND3:I1->O            1   0.053   0.725  M1/XLXI_38 (M1/XLXN_185)
+     OR4:I1->O             1   0.053   0.725  M1/XLXI_41 (M1/XLXN_213)
+     OR2:I1->O             1   0.053   0.413  M1/XLXI_52 (SEG_TXT<5>)
+     LUT3:I2->O            1   0.053   0.399  MUXHM/Mmux_o6 (SEGMENT<5>)
+     end scope: 'U61:SEGMENT<5>'
+     OBUF:I->O                 0.000          SEGMENT_5_OBUF (SEGMENT<5>)
+    ----------------------------------------
+    Total                      7.096ns (0.925ns logic, 6.171ns route)
+                                       (13.0% logic, 87.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock M4/push
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M4/push        |    1.277|         |         |         |
+U9/clk1        |    1.001|         |         |         |
+clk_100mhz     |    1.603|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U6/P7SEG/sh_clk
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U6/P7SEG/sh_clk           |         |         |    0.852|         |
+U8/rst_clkdiv[31]_AND_11_o|         |         |    7.573|         |
+U8/rst_clkdiv[31]_AND_13_o|         |         |    7.582|         |
+U8/rst_clkdiv[31]_AND_15_o|         |         |    7.594|         |
+U8/rst_clkdiv[31]_AND_17_o|         |         |    6.097|         |
+U8/rst_clkdiv[31]_AND_19_o|         |         |    6.173|         |
+U8/rst_clkdiv[31]_AND_1_o |         |         |    6.097|         |
+U8/rst_clkdiv[31]_AND_21_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_23_o|         |         |    6.201|         |
+U8/rst_clkdiv[31]_AND_25_o|         |         |    6.229|         |
+U8/rst_clkdiv[31]_AND_27_o|         |         |    6.305|         |
+U8/rst_clkdiv[31]_AND_29_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_31_o|         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_33_o|         |         |    6.091|         |
+U8/rst_clkdiv[31]_AND_35_o|         |         |    6.173|         |
+U8/rst_clkdiv[31]_AND_37_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_39_o|         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_3_o |         |         |    6.173|         |
+U8/rst_clkdiv[31]_AND_41_o|         |         |    6.097|         |
+U8/rst_clkdiv[31]_AND_43_o|         |         |    6.180|         |
+U8/rst_clkdiv[31]_AND_45_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_47_o|         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_49_o|         |         |    6.104|         |
+U8/rst_clkdiv[31]_AND_51_o|         |         |    6.173|         |
+U8/rst_clkdiv[31]_AND_53_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_55_o|         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_57_o|         |         |    6.097|         |
+U8/rst_clkdiv[31]_AND_59_o|         |         |    6.173|         |
+U8/rst_clkdiv[31]_AND_5_o |         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_61_o|         |         |    6.187|         |
+U8/rst_clkdiv[31]_AND_63_o|         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_7_o |         |         |    6.194|         |
+U8/rst_clkdiv[31]_AND_9_o |         |         |    7.580|         |
+clk_100mhz                |         |         |    7.370|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_11_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_11_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_13_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_13_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_15_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_15_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_17_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_17_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_19_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_19_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_1_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_1_o|         |         |    1.788|         |
+clk_100mhz               |         |         |    1.864|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_21_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_21_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_23_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_23_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_25_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_25_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_27_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_27_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_29_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_29_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_31_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_31_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_33_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_33_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_35_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_35_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_37_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_37_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_39_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_39_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_3_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_3_o|         |         |    1.788|         |
+clk_100mhz               |         |         |    1.864|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_41_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_41_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_43_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_43_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_45_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_45_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_47_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_47_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_49_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_49_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_51_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_51_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_53_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_53_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_55_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_55_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_57_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_57_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_59_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_59_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_5_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_5_o|         |         |    1.788|         |
+clk_100mhz               |         |         |    1.864|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_61_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_61_o|         |         |    1.788|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_63_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_63_o|         |         |    1.794|         |
+clk_100mhz                |         |         |    1.864|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_7_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_7_o|         |         |    1.788|         |
+clk_100mhz               |         |         |    1.864|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/rst_clkdiv[31]_AND_9_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+U8/rst_clkdiv[31]_AND_9_o|         |         |    1.788|         |
+clk_100mhz               |         |         |    1.864|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U9/clk1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U9/clk1        |    2.576|         |         |         |
+clk_100mhz     |    1.557|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_100mhz
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+M4/push                   |    2.339|         |         |         |
+U6/P7SEG/sh_clk           |         |    2.493|         |         |
+U8/rst_clkdiv[31]_AND_11_o|         |    2.359|    3.484|         |
+U8/rst_clkdiv[31]_AND_13_o|         |    2.376|    3.486|         |
+U8/rst_clkdiv[31]_AND_15_o|         |    2.389|    3.498|         |
+U8/rst_clkdiv[31]_AND_17_o|         |    2.271|         |         |
+U8/rst_clkdiv[31]_AND_19_o|         |    2.286|         |         |
+U8/rst_clkdiv[31]_AND_1_o |         |    1.788|         |         |
+U8/rst_clkdiv[31]_AND_21_o|         |    2.301|         |         |
+U8/rst_clkdiv[31]_AND_23_o|         |    2.323|         |         |
+U8/rst_clkdiv[31]_AND_25_o|         |    2.463|         |         |
+U8/rst_clkdiv[31]_AND_27_o|         |    2.478|         |         |
+U8/rst_clkdiv[31]_AND_29_o|         |    2.361|         |         |
+U8/rst_clkdiv[31]_AND_31_o|         |    2.376|         |         |
+U8/rst_clkdiv[31]_AND_33_o|         |    2.385|         |         |
+U8/rst_clkdiv[31]_AND_35_o|         |    2.406|         |         |
+U8/rst_clkdiv[31]_AND_37_o|         |    2.421|         |         |
+U8/rst_clkdiv[31]_AND_39_o|         |    2.436|         |         |
+U8/rst_clkdiv[31]_AND_3_o |         |    2.166|         |         |
+U8/rst_clkdiv[31]_AND_41_o|         |    2.451|         |         |
+U8/rst_clkdiv[31]_AND_43_o|         |    2.473|         |         |
+U8/rst_clkdiv[31]_AND_45_o|         |    2.481|         |         |
+U8/rst_clkdiv[31]_AND_47_o|         |    2.496|         |         |
+U8/rst_clkdiv[31]_AND_49_o|         |    2.518|         |         |
+U8/rst_clkdiv[31]_AND_51_o|         |    2.526|         |         |
+U8/rst_clkdiv[31]_AND_53_o|         |    2.541|         |         |
+U8/rst_clkdiv[31]_AND_55_o|         |    2.556|         |         |
+U8/rst_clkdiv[31]_AND_57_o|         |    2.571|         |         |
+U8/rst_clkdiv[31]_AND_59_o|         |    2.586|         |         |
+U8/rst_clkdiv[31]_AND_5_o |         |    2.181|         |         |
+U8/rst_clkdiv[31]_AND_61_o|         |    2.601|         |         |
+U8/rst_clkdiv[31]_AND_63_o|         |    2.136|         |         |
+U8/rst_clkdiv[31]_AND_7_o |         |    2.196|         |         |
+U8/rst_clkdiv[31]_AND_9_o |         |    2.344|    3.484|         |
+U9/clk1                   |    1.324|         |         |         |
+clk_100mhz                |    2.629|    1.092|    3.274|         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.03 secs
+ 
+--> 
+
+Total memory usage is 4655764 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/3170300180/mux8-1/mux81.v -lang verilog -prj mux8-1 -o mux81.spl -module mux81 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 mux81.spl D:/3170300180/mux8-1/mux81.sym 
