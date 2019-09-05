@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Y:/Desktop/MultiCycleCPU/alu32.xst" -ofn "Y:/Desktop/MultiCycleCPU/alu32.syr" 

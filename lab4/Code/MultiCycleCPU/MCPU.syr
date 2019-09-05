@@ -1,0 +1,203 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: MCPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MCPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MCPU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : MCPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\add32.v" into library work
+Parsing module <add32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\xor32.v" into library work
+Parsing module <xor32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\srl32.v" into library work
+Parsing module <srl32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\or32.v" into library work
+Parsing module <or32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\nor32.v" into library work
+Parsing module <nor32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\mux8to1.v" into library work
+Parsing module <mux8to1>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\and32.v" into library work
+Parsing module <and32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\addsub32.v" into library work
+Parsing module <addsub32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\sign_extension.v" into library work
+Parsing module <sign_extension>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\regs.v" into library work
+Parsing module <regs>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\reg32.v" into library work
+Parsing module <reg32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\mux4_1_32.v" into library work
+Parsing module <mux4_1_32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\mux4_1.v" into library work
+Parsing module <mux4_1>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\mux2_1.v" into library work
+Parsing module <mux2_1>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\alu32.v" into library work
+Parsing module <alu32>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\datapath.v" into library work
+Parsing module <datapath>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\controller.v" into library work
+Parsing module <controller>.
+Analyzing Verilog file "\\mac\home\Desktop\MultiCycleCPU\MCPU.v" into library work
+Parsing module <MCPU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "\\mac\home\Desktop\MultiCycleCPU\MCPU.v" Line 46: Port regwrite is not connected to this instance
+
+Elaborating module <MCPU>.
+
+Elaborating module <controller>.
+WARNING:HDLCompiler:462 - "\\mac\home\Desktop\MultiCycleCPU\controller.v" Line 52: if-condition does not match any sensitivity list edge
+ERROR:HDLCompiler:1128 - "\\mac\home\Desktop\MultiCycleCPU\controller.v" Line 52: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module controller remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "\\mac\home\Desktop\MultiCycleCPU\controller.v" Line 23: Empty module <controller> remains a black box.
+WARNING:HDLCompiler:1127 - "\\mac\home\Desktop\MultiCycleCPU\MCPU.v" Line 41: Assignment to RegWrite ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "\\mac\home\Desktop\MultiCycleCPU\datapath.v" Line 59: Port co is not connected to this instance
+
+Elaborating module <datapath>.
+
+Elaborating module <reg32>.
+
+Elaborating module <mux4_1>.
+
+Elaborating module <mux4_1_32>.
+
+Elaborating module <regs>.
+
+Elaborating module <sign_extension>.
+
+Elaborating module <mux2_1>.
+
+Elaborating module <alu32>.
+
+Elaborating module <and32>.
+
+Elaborating module <or32>.
+
+Elaborating module <xor32>.
+
+Elaborating module <nor32>.
+
+Elaborating module <srl32>.
+WARNING:HDLCompiler:1016 - "\\mac\home\Desktop\MultiCycleCPU\addsub32.v" Line 28: Port overflow is not connected to this instance
+
+Elaborating module <addsub32>.
+
+Elaborating module <add32>.
+
+Elaborating module <mux8to1>.
+WARNING:HDLCompiler:413 - "\\mac\home\Desktop\MultiCycleCPU\alu32.v" Line 41: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:634 - "\\mac\home\Desktop\MultiCycleCPU\MCPU.v" Line 47: Net <AluSrcA> does not have a driver.
+WARNING:HDLCompiler:552 - "\\mac\home\Desktop\MultiCycleCPU\MCPU.v" Line 46: Input port regwrite is not connected on this instance
+--> 
+
+Total memory usage is 225184 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

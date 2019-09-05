@@ -1,0 +1,705 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: scpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "scpu.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "scpu"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : scpu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\mac\home\Documents\lab6\add32.v" into library work
+Parsing module <add32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\xor32.v" into library work
+Parsing module <xor32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\srl32.v" into library work
+Parsing module <srl32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\or32.v" into library work
+Parsing module <or32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\nor32.v" into library work
+Parsing module <nor32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\mux8to1.v" into library work
+Parsing module <mux8to1>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\and32.v" into library work
+Parsing module <and32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\addsub32.v" into library work
+Parsing module <addsub32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\sign_ext.v" into library work
+Parsing module <sign_ext>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\registers.v" into library work
+Parsing module <registers>.
+WARNING:HDLCompiler:1490 - "\\mac\home\Documents\lab6\registers.v" Line 37: Loop valiable declaration is not allowed in this mode of verilog
+Analyzing Verilog file "\\mac\home\Documents\lab6\p_counter.v" into library work
+Parsing module <p_counter>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\alu32.v" into library work
+Parsing module <alu32>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\datapath.v" into library work
+Parsing module <datapath>.
+WARNING:HDLCompiler:751 - "\\mac\home\Documents\lab6\datapath.v" Line 37: Redeclaration of ansi port pc_out is not allowed
+Analyzing Verilog file "\\mac\home\Documents\lab6\controller.v" into library work
+Parsing module <controller>.
+Analyzing Verilog file "\\mac\home\Documents\lab6\scpu.v" into library work
+Parsing module <scpu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <scpu>.
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\lab6\datapath.v" Line 66: Port co is not connected to this instance
+
+Elaborating module <datapath>.
+
+Elaborating module <p_counter>.
+
+Elaborating module <sign_ext>.
+
+Elaborating module <registers>.
+
+Elaborating module <alu32>.
+
+Elaborating module <and32>.
+
+Elaborating module <or32>.
+
+Elaborating module <xor32>.
+
+Elaborating module <nor32>.
+
+Elaborating module <srl32>.
+WARNING:HDLCompiler:1016 - "\\mac\home\Documents\lab6\addsub32.v" Line 28: Port overflow is not connected to this instance
+
+Elaborating module <addsub32>.
+
+Elaborating module <add32>.
+
+Elaborating module <mux8to1>.
+WARNING:HDLCompiler:413 - "\\mac\home\Documents\lab6\alu32.v" Line 41: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <controller>.
+WARNING:HDLCompiler:1127 - "\\mac\home\Documents\lab6\scpu.v" Line 66: Assignment to regdst ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "\\mac\home\Documents\lab6\scpu.v" Line 50: Net <reg_dst> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <scpu>.
+    Related source file is "\\mac\home\Documents\lab6\scpu.v".
+WARNING:Xst:647 - Input <INT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "\\mac\home\Documents\lab6\scpu.v" line 65: Output port <regdst> of the instance <mod1> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <reg_dst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <scpu> synthesized.
+
+Synthesizing Unit <datapath>.
+    Related source file is "\\mac\home\Documents\lab6\datapath.v".
+INFO:Xst:3210 - "\\mac\home\Documents\lab6\datapath.v" line 66: Output port <co> of the instance <mod4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\mac\home\Documents\lab6\datapath.v" line 66: Output port <overflow> of the instance <mod4> is unconnected or connected to loadless signal.
+    Found 32-bit adder for signal <pc_plus_4> created at line 41.
+    Found 32-bit adder for signal <branch_pc> created at line 44.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <datapath> synthesized.
+
+Synthesizing Unit <p_counter>.
+    Related source file is "\\mac\home\Documents\lab6\p_counter.v".
+    Found 32-bit register for signal <counter>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <p_counter> synthesized.
+
+Synthesizing Unit <sign_ext>.
+    Related source file is "\\mac\home\Documents\lab6\sign_ext.v".
+    Summary:
+	no macro.
+Unit <sign_ext> synthesized.
+
+Synthesizing Unit <registers>.
+    Related source file is "\\mac\home\Documents\lab6\registers.v".
+    Found 1024-bit register for signal <n0048[1023:0]>.
+    Found 32-bit 32-to-1 multiplexer for signal <A_data> created at line 33.
+    Found 32-bit 32-to-1 multiplexer for signal <B_data> created at line 34.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <registers> synthesized.
+
+Synthesizing Unit <alu32>.
+    Related source file is "\\mac\home\Documents\lab6\alu32.v".
+WARNING:Xst:653 - Signal <overflow> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <alu32> synthesized.
+
+Synthesizing Unit <and32>.
+    Related source file is "\\mac\home\Documents\lab6\and32.v".
+    Summary:
+	no macro.
+Unit <and32> synthesized.
+
+Synthesizing Unit <or32>.
+    Related source file is "\\mac\home\Documents\lab6\or32.v".
+    Summary:
+	no macro.
+Unit <or32> synthesized.
+
+Synthesizing Unit <xor32>.
+    Related source file is "\\mac\home\Documents\lab6\xor32.v".
+    Summary:
+Unit <xor32> synthesized.
+
+Synthesizing Unit <nor32>.
+    Related source file is "\\mac\home\Documents\lab6\nor32.v".
+    Summary:
+	no macro.
+Unit <nor32> synthesized.
+
+Synthesizing Unit <srl32>.
+    Related source file is "\\mac\home\Documents\lab6\srl32.v".
+WARNING:Xst:647 - Input <a> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <srl32> synthesized.
+
+Synthesizing Unit <addsub32>.
+    Related source file is "\\mac\home\Documents\lab6\addsub32.v".
+INFO:Xst:3210 - "\\mac\home\Documents\lab6\addsub32.v" line 28: Output port <overflow> of the instance <mod0> is unconnected or connected to loadless signal.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <addsub32> synthesized.
+
+Synthesizing Unit <add32>.
+    Related source file is "\\mac\home\Documents\lab6\add32.v".
+WARNING:Xst:653 - Signal <overflow> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 33-bit adder for signal <n0011> created at line 28.
+    Found 33-bit adder for signal <n0004> created at line 28.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <add32> synthesized.
+
+Synthesizing Unit <mux8to1>.
+    Related source file is "\\mac\home\Documents\lab6\mux8to1.v".
+WARNING:Xst:647 - Input <addsub32_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 8-to-1 multiplexer for signal <out> created at line 34.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux8to1> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "\\mac\home\Documents\lab6\controller.v".
+WARNING:Xst:647 - Input <func<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <MIO_ready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 33-bit adder                                          : 2
+# Registers                                            : 2
+ 1024-bit register                                     : 1
+ 32-bit register                                       : 1
+# Multiplexers                                         : 40
+ 32-bit 2-to-1 multiplexer                             : 37
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 33-bit adder carry in                                 : 1
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
+# Multiplexers                                         : 40
+ 32-bit 2-to-1 multiplexer                             : 37
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <datapath>: instances <mod1>, <mod3> of unit <sign_ext> are equivalent, second instance is removed
+
+Optimizing unit <p_counter> ...
+
+Optimizing unit <scpu> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <alu32> ...
+
+Optimizing unit <registers> ...
+WARNING:Xst:1710 - FF/Latch <mod0/mod2/regs_31_992> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_993> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_994> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_995> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_996> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_997> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_998> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_999> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1000> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1001> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1002> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1003> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1004> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1005> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1006> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1007> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1008> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1009> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1010> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1011> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1012> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1013> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1014> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1015> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1016> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1017> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1018> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1019> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1020> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1021> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1022> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mod0/mod2/regs_31_1023> (without init value) has a constant value of 0 in block <scpu>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block scpu, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1024
+ Flip-Flops                                            : 1024
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : scpu.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2188
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 29
+#      LUT2                        : 34
+#      LUT3                        : 2
+#      LUT4                        : 33
+#      LUT5                        : 1090
+#      LUT6                        : 748
+#      MUXCY                       : 91
+#      MUXF7                       : 64
+#      VCC                         : 1
+#      XORCY                       : 94
+# FlipFlops/Latches                : 1024
+#      FDC                         : 32
+#      FDCE                        : 992
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 162
+#      IBUF                        : 65
+#      OBUF                        : 97
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1024  out of  126800     0%  
+ Number of Slice LUTs:                 1937  out of  63400     3%  
+    Number used as Logic:              1937  out of  63400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1937
+   Number with an unused Flip Flop:     913  out of   1937    47%  
+   Number with an unused LUT:             0  out of   1937     0%  
+   Number of fully used LUT-FF pairs:  1024  out of   1937    52%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         166
+ Number of bonded IOBs:                 163  out of    210    77%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1024  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.850ns (Maximum Frequency: 170.941MHz)
+   Minimum input arrival time before clock: 5.905ns
+   Maximum output required time after clock: 4.648ns
+   Maximum combinational path delay: 4.702ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.850ns (frequency: 170.941MHz)
+  Total number of paths / destination ports: 3424975 / 1024
+-------------------------------------------------------------------------
+Delay:               5.850ns (Levels of Logic = 11)
+  Source:            mod0/mod2/regs_31_160 (FF)
+  Destination:       mod0/mod0/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: mod0/mod2/regs_31_160 to mod0/mod0/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.361   0.566  mod0/mod2/regs_31_160 (mod0/mod2/regs_31_160)
+     LUT6:I2->O            1   0.097   0.556  mod0/mod2/Mmux_A_data_81 (mod0/mod2/Mmux_A_data_81)
+     LUT6:I2->O            1   0.097   0.000  mod0/mod2/Mmux_A_data_3 (mod0/mod2/Mmux_A_data_3)
+     MUXF7:I1->O           3   0.279   0.389  mod0/mod2/Mmux_A_data_2_f7 (mod0/A_data<0>)
+     LUT6:I4->O            1   0.097   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0>)
+     XORCY:CI->O           2   0.370   0.299  mod0/mod4/mod5/mod0/Madd_n0004_Madd_xor<1> (mod0/mod4/addsub32out<1>)
+     LUT5:I4->O            1   0.097   0.511  mod0/mod4/mod6/Mmux_out122_1 (mod0/mod4/mod6/Mmux_out122)
+     LUT6:I3->O            1   0.097   0.295  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>5 (mod0/mod4/res[31]_GND_6_o_equal_1_o<31>4)
+     LUT6:I5->O            1   0.097   0.683  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>6 (mod0/mod4/res[31]_GND_6_o_equal_1_o<31>5)
+     LUT6:I1->O           32   0.097   0.402  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>8 (mod0/z)
+     LUT6:I5->O            1   0.097   0.000  mod0/Mmux_mux_291 (mod0/mux_2<17>)
+     FDC:D                     0.008          mod0/mod0/counter_17
+    ----------------------------------------
+    Total                      5.850ns (2.147ns logic, 3.703ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2679631 / 3040
+-------------------------------------------------------------------------
+Offset:              5.905ns (Levels of Logic = 11)
+  Source:            inst_in<31> (PAD)
+  Destination:       mod0/mod0/counter_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: inst_in<31> to mod0/mod0/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   0.001   0.791  inst_in_31_IBUF (inst_in_31_IBUF)
+     LUT6:I1->O           65   0.097   0.623  mod1/op[0]_op[5]_OR_99_o<0>1 (mod1/op[0]_op[5]_OR_99_o)
+     LUT3:I0->O           37   0.097   0.791  mod1/alu_crtl<2>1 (alu_crtl<2>)
+     LUT6:I1->O            1   0.097   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0>)
+     XORCY:CI->O           2   0.370   0.299  mod0/mod4/mod5/mod0/Madd_n0004_Madd_xor<1> (mod0/mod4/addsub32out<1>)
+     LUT5:I4->O            1   0.097   0.511  mod0/mod4/mod6/Mmux_out122_1 (mod0/mod4/mod6/Mmux_out122)
+     LUT6:I3->O            1   0.097   0.295  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>5 (mod0/mod4/res[31]_GND_6_o_equal_1_o<31>4)
+     LUT6:I5->O            1   0.097   0.683  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>6 (mod0/mod4/res[31]_GND_6_o_equal_1_o<31>5)
+     LUT6:I1->O           32   0.097   0.402  mod0/mod4/res[31]_GND_6_o_equal_1_o<31>8 (mod0/z)
+     LUT6:I5->O            1   0.097   0.000  mod0/Mmux_mux_291 (mod0/mux_2<17>)
+     FDC:D                     0.008          mod0/mod0/counter_17
+    ----------------------------------------
+    Total                      5.905ns (1.508ns logic, 4.397ns route)
+                                       (25.5% logic, 74.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 55119 / 96
+-------------------------------------------------------------------------
+Offset:              4.648ns (Levels of Logic = 38)
+  Source:            mod0/mod2/regs_31_160 (FF)
+  Destination:       addr_out<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mod0/mod2/regs_31_160 to addr_out<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.361   0.566  mod0/mod2/regs_31_160 (mod0/mod2/regs_31_160)
+     LUT6:I2->O            1   0.097   0.556  mod0/mod2/Mmux_A_data_81 (mod0/mod2/Mmux_A_data_81)
+     LUT6:I2->O            1   0.097   0.000  mod0/mod2/Mmux_A_data_3 (mod0/mod2/Mmux_A_data_3)
+     MUXF7:I1->O           3   0.279   0.389  mod0/mod2/Mmux_A_data_2_f7 (mod0/A_data<0>)
+     LUT6:I4->O            1   0.097   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<1> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<2> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<3> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<4> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<5> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<6> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<7> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<8> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<9> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<10> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<11> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<12> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<13> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<14> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<15> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<16> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<17> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<18> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<19> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<20> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<21> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<22> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<23> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<24> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<25> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<26> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<27> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<28> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<29> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<30> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<30>)
+     XORCY:CI->O           4   0.370   0.309  mod0/mod4/mod5/mod0/Madd_n0004_Madd_xor<31> (mod0/mod4/addsub32out<31>)
+     LUT6:I5->O           32   0.097   0.386  mod0/mod4/mod6/Mmux_out251 (addr_out_31_OBUF)
+     OBUF:I->O                 0.000          addr_out_31_OBUF (addr_out<31>)
+    ----------------------------------------
+    Total                      4.648ns (2.441ns logic, 2.207ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 42656 / 65
+-------------------------------------------------------------------------
+Delay:               4.702ns (Levels of Logic = 38)
+  Source:            inst_in<31> (PAD)
+  Destination:       addr_out<31> (PAD)
+
+  Data Path: inst_in<31> to addr_out<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   0.001   0.791  inst_in_31_IBUF (inst_in_31_IBUF)
+     LUT6:I1->O           65   0.097   0.623  mod1/op[0]_op[5]_OR_99_o<0>1 (mod1/op[0]_op[5]_OR_99_o)
+     LUT3:I0->O           37   0.097   0.791  mod1/alu_crtl<2>1 (alu_crtl<2>)
+     LUT6:I1->O            1   0.097   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<1> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<2> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<3> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<4> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<5> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<6> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<7> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<8> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<9> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<10> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<11> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<12> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<13> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<14> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<15> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<16> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<17> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<18> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<19> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<20> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<21> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<22> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<23> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<24> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<25> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<26> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<27> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<28> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<29> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<30> (mod0/mod4/mod5/mod0/Madd_n0004_Madd_cy<30>)
+     XORCY:CI->O           4   0.370   0.309  mod0/mod4/mod5/mod0/Madd_n0004_Madd_xor<31> (mod0/mod4/addsub32out<31>)
+     LUT6:I5->O           32   0.097   0.386  mod0/mod4/mod6/Mmux_out251 (addr_out_31_OBUF)
+     OBUF:I->O                 0.000          addr_out_31_OBUF (addr_out<31>)
+    ----------------------------------------
+    Total                      4.702ns (1.802ns logic, 2.900ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.850|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.37 secs
+ 
+--> 
+
+Total memory usage is 4722776 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

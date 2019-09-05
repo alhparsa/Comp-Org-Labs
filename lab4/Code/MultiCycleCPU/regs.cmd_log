@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Y:/Desktop/MultiCycleCPU/regs.xst" -ofn "Y:/Desktop/MultiCycleCPU/regs.syr" 

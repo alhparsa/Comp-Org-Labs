@@ -1,0 +1,28 @@
+Command line:
+   nihao_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  19484
+
+Wed Mar 13 15:52:45 2019
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 5354.53 Meg
+
+ Total Signals          : 17
+ Total Nets             : 27
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 125
+
+ Total Simulation Time: 0.296875 sec
+
+ Current Memory Usage: 5354.53 Meg
+
+Wed Mar 13 15:53:10 2019
+

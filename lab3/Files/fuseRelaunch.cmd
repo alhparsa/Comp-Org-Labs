@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Y:/sfuvault/comp org/labs/lab4/srl32_test_isim_beh.exe" -prj "Y:/sfuvault/comp org/labs/lab4/srl32_test_beh.prj" "work.srl32_test" "work.glbl" 

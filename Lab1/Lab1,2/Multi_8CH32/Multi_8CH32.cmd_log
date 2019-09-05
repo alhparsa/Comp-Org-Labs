@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/GreenSoft/logic_code2018/exp7code/mux/Multi_8CH32.v -lang verilog -prj mux -o Multi_8CH32.spl -module Multi_8CH32 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Multi_8CH32.spl C:/GreenSoft/logic_code2018/exp7code/mux/Multi_8CH32.sym 
